@@ -9,7 +9,7 @@ pipeline{
 		}
 		stage('Build maven project'){
 		    steps{
-			    	bat 'cd musictore'
+			    	bat 'cd musicstore'
 				bat 'mvn -Dmaven.test.failure.ignore=true clean package'
 		    }
 		}
