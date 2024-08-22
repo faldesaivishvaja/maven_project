@@ -9,8 +9,8 @@ pipeline{
 		}
 		stage('Build maven project'){
 		    steps{
-			    	bat 'cd musicstore'
-				bat 'mvn -Dmaven.test.failure.ignore=true clean package'
+			    	bat '''cd musicstore
+				mvn -Dmaven.test.failure.ignore=true clean package'''
 		    }
 		}
 		stage('Building tomcat image with generated war file using Dockerfile'){
